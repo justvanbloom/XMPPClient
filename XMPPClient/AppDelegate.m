@@ -137,7 +137,7 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 #if !TARGET_IPHONE_SIMULATOR
 	{
 		
-		xmppStream.enableBackgroundingOnSocket = YES;
+		_xmppStream.enableBackgroundingOnSocket = YES;
 	}
 #endif
 	

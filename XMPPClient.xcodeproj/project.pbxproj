@@ -149,14 +149,8 @@
 /* Begin PBXFileReference section */
 		8B0068181571D50100CC0C0B /* button_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_login.png; sourceTree = "<group>"; };
 		8B2908031575B2EA0083305D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/InvitationViewController.xib; sourceTree = "<group>"; };
-		8B2908061575B3090083305D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/InvitationViewController.xib"; sourceTree = "<group>"; };
-		8B2908071575B3110083305D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hant"; path = "zh-Hant.lproj/InvitationViewController.xib"; sourceTree = "<group>"; };
 		8B2908161575B7EE0083305D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8B2908171575B86B0083305D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/MainStoryboard.storyboard"; sourceTree = "<group>"; };
-		8B2908181575B86E0083305D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hant"; path = "zh-Hant.lproj/MainStoryboard.storyboard"; sourceTree = "<group>"; };
 		8B2908571575BB3F0083305D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		8B2908591575C2230083305D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		8B29085A1575C4A70083305D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		8B7AA545157384560032307E /* xmpp-client.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "xmpp-client.png"; path = "../xmpp-client.png"; sourceTree = "<group>"; };
 		8B862723156FD65D0037D52A /* bubble_default_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubble_default_left.png; sourceTree = "<group>"; };
 		8B862724156FD65D0037D52A /* bubble_default_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubble_default_right.png; sourceTree = "<group>"; };
@@ -1382,8 +1376,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				8B2908031575B2EA0083305D /* en */,
-				8B2908061575B3090083305D /* zh-Hans */,
-				8B2908071575B3110083305D /* zh-Hant */,
 			);
 			name = InvitationViewController.xib;
 			sourceTree = "<group>";
@@ -1392,8 +1384,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				8B2908571575BB3F0083305D /* en */,
-				8B2908591575C2230083305D /* zh-Hans */,
-				8B29085A1575C4A70083305D /* zh-Hant */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -1410,8 +1400,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				8BD683EE156FB98F00026222 /* en */,
-				8B2908171575B86B0083305D /* zh-Hans */,
-				8B2908181575B86E0083305D /* zh-Hant */,
 			);
 			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
@@ -1469,10 +1457,12 @@
 		8BD683F6156FB98F00026222 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XMPPClient/XMPPClient-Prefix.pch";
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "XMPPClient/XMPPClient-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/XMPPClient/Vendor/libidn\"",
@@ -1480,6 +1470,7 @@
 					/usr/include/libxml2,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1487,16 +1478,19 @@
 		8BD683F7156FB98F00026222 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XMPPClient/XMPPClient-Prefix.pch";
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "XMPPClient/XMPPClient-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/XMPPClient/Vendor/libidn\"",
 					"\"$(SRCROOT)\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
